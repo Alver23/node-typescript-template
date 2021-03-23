@@ -9,5 +9,5 @@
   "env": {
     "NODE_ENV": "development"
   },
-  "ignore": ["node_modules", "cache", "dist", "reports", "test", ".git"]
+  "ignore": ["node_modules", "build", "dist", "reports", "test", ".git"]
 }
