@@ -4,7 +4,18 @@
   "description": "Base model for working with typescript and express using hexagonal architecture",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "env:dev": "cp ./environments/.env.development .env",
+    "env:prod": "cp ./environments/.env.production .env",
+    "build": "tsc",
+    "start": "node build/index.js",
+    "start:dev": "nodemon src/index.ts",
+    "lint": "eslint --ext ts src --ignore-path .eslintignore",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:report": "eslint --ext ts src/ -f html -o reports/lint.html",
+    "prettier": "prettier --config .prettierrc --ignore-path ./.prettierignore --write src/**/*.ts",
+    "test": "jest --passWithNoTests --logHeapUsage",
+    "test:watch": "npm test -- --verbose --watch",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -27,5 +38,28 @@
   "bugs": {
     "url": "https://github.com/Alver23/node-typescript-template/issues"
   },
-  "homepage": "https://github.com/Alver23/node-typescript-template#readme"
+  "homepage": "https://github.com/Alver23/node-typescript-template#readme",
+  "devDependencies": {
+    "@commitlint/cli": "12.0.1",
+    "@commitlint/config-conventional": "12.0.1",
+    "@types/jest": "26.0.21",
+    "@typescript-eslint/eslint-plugin": "4.12.0",
+    "@typescript-eslint/parser": "4.12.0",
+    "eslint": "7.22.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "7.1.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.3.1",
+    "husky": "4.3.8",
+    "jest": "26.6.3",
+    "jest-html-reporters": "^2.1.2",
+    "lint-staged": "10.5.4",
+    "nodemon": "2.0.7",
+    "prettier": "2.2.1",
+    "rimraf": "3.0.2",
+    "standard-version": "9.1.1",
+    "ts-jest": "26.4.4",
+    "ts-node": "9.1.1",
+    "typescript": "4.1.3"
+  }
 }
