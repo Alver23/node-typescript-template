@@ -6,14 +6,18 @@
 export default {
   clearMocks: true,
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/***/*.ts'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts', '!<rootDir>/src/index.ts', '!<rootDir>/src/**/interfaces/*.ts'],
   coverageDirectory: 'coverage',
+  coveragePathIgnorePatterns: ['<rootDir>/src/config'],
   coverageProvider: 'v8',
   displayName: 'node-typescript-template',
   globals: {
     'ts-jest': {
-      tsConfig: './tsconfig.spec.json',
+      tsconfig: './tsconfig.spec.json',
     },
+  },
+  moduleNameMapper: {
+    '@alversoft/(.*)': '<rootDir>/src/$1',
   },
   notify: true,
   reporters: [
