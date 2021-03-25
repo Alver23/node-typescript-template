@@ -3,7 +3,7 @@ import 'module-alias/register';
 import express from 'express';
 
 // Bootstrap
-import ExpressServer from '@alversoft/bootstrap/server';
+import ExpressServer from '@alversoft/bootstrap/express-server/server';
 import HttpServer from '@alversoft/bootstrap/http-server';
 
 // Config
