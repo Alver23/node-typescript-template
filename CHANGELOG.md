@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/Alver23/node-typescript-template/compare/v0.2.1...v0.2.2) (2021-03-26)
+
+
+### Bug Fixes
+
+* remove RELEASE_BODY ([9fe7286](https://github.com/Alver23/node-typescript-template/commit/9fe7286f41b7c8789fb4d1c4712c797759c09c11))
+
 ### [0.2.1](https://github.com/Alver23/node-typescript-template/compare/v0.1.3...v0.2.1) (2021-03-26)
 
 
