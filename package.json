@@ -1,6 +1,6 @@
 {
   "name": "node-typescript-template",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Base model for working with typescript, express using hexagonal architecture",
   "main": "index.js",
   "scripts": {
