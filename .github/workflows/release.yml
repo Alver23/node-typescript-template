@@ -16,7 +16,7 @@ jobs:
         run: |
           git config user.name Alver Grisales
           git config user.email viga.23@hotmail.com
-          npm ci && npm run release -- CHANGELOG.md
+          npm ci && npm run release
       - name: publish tag
         id: publish_tag
         run: |
@@ -29,4 +29,4 @@ jobs:
         with:
           release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
           tag_name: ${{ steps.publish_tag.outputs.tag_name }}
-          body_path: RELEASE_BODY.md
+          body_path: CHANGELOG.md
