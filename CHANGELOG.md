@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/Alver23/node-typescript-template/compare/v0.2.2...v0.2.3) (2021-03-26)
+
+
+### Bug Fixes
+
+* upgrade debug from 4.3.1 to 4.3.2 ([42a3596](https://github.com/Alver23/node-typescript-template/commit/42a3596125d73227a38fc1232e26aa44297e282d))
+
 ### [0.2.2](https://github.com/Alver23/node-typescript-template/compare/v0.2.1...v0.2.2) (2021-03-26)
 
 
