@@ -1,10 +1,6 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Release
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
 
@@ -20,7 +16,7 @@ jobs:
         run: |
           git config user.name Alver Grisales
           git config user.email viga.23@hotmail.com
-          npm run release --  --skip.commit
+          npm ci && npm run release
       - name: publish tag
         id: publish_tag
         run: |
