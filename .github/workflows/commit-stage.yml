@@ -1,8 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
-name: commitstage
+name: commit
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   push:
     branches: [ feature/*, bugfix/*, hotfix/* ]
