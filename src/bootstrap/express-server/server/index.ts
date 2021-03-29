@@ -12,7 +12,11 @@ import ServerTemplate from '../server-template';
 class Server extends ServerTemplate implements IBootstrap {
   protected server: Application;
 
-  constructor(server: Application, private readonly port: number = 3000, private readonly basePath = '') {
+  constructor(
+    server: Application,
+    private readonly port: number = 3000,
+    private readonly basePath = ''
+  ) {
     super();
     this.server = server;
     this.server.set('port', this.port);

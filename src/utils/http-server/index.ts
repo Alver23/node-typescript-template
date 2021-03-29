@@ -6,7 +6,10 @@ export const normalizePort = (portArg: string): boolean | number => {
   return parsed > 0 ? parsed : false;
 };
 
-export const onError = (error: NodeJS.ErrnoException, callback: (params) => void): void => {
+export const onError = (
+  error: NodeJS.ErrnoException,
+  callback: (params) => void
+): void => {
   if (error.syscall !== 'listen') {
     throw error;
   }
