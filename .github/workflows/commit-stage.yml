@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: commit
+
+# Controls when the action will run.
+on:
+  push:
+    branches: [ feature/*, bugfix/*, hotfix/* ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Usaaaae Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run lint
+    - run: npm test
+    - run: npm run coveralls
+    - run: npm run build

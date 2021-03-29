@@ -15,7 +15,10 @@ import { onError, onListening } from '@alversoft/utils/http-server';
 class HttpServer implements IBootstrap {
   private readonly debug: Debug;
 
-  constructor(private readonly server: Application, private readonly port: number) {
+  constructor(
+    private readonly server: Application,
+    private readonly port: number
+  ) {
     this.debug = Debug(`${config.appName}:http-server`);
     this.debugLog = this.debugLog.bind(this);
   }
