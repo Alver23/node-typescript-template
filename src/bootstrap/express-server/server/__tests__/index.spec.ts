@@ -14,6 +14,10 @@ describe('ExpressServer', () => {
 
   it('should start a server', async (done) => {
     const server = await expressServer.initialize();
-    supertest(server).get('/health').set('Accept', 'application/json').expect('Content-Type', /json/).expect(200, done);
+    supertest(server)
+      .get('/health')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
   });
 });
